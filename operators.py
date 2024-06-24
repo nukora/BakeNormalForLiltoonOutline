@@ -47,7 +47,7 @@ def bake_normal(obj, src):
             src_loop = src.data.loops[loop_index]
             src_normal = src_loop.normal
 
-            obj.data.vertex_colors["Col"].data[loop_index].color = (
+            obj.data.vertex_colors.active.data[loop_index].color = (
                 mathutils.Vector.dot(src_normal, obj_tangent) * 0.5 + 0.5,
                 mathutils.Vector.dot(src_normal, obj_bitangent) * 0.5 + 0.5,
                 mathutils.Vector.dot(src_normal, obj_normal) * 0.5 + 0.5,

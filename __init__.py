@@ -17,7 +17,7 @@ bl_info = {
     "name" : "Bake Normals for lilToon Outline",
     "author" : "Nukora",
     "description" : "Bake normals to vertex colors for lilToon outline.",
-    "blender" : (4, 1, 0),
+    "blender" : (3, 5, 0),
     "version" : (1, 0, 0),
     "location" : "View3D > Object",
     "warning" : "",

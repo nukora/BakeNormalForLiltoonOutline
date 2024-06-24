@@ -31,6 +31,7 @@ class BNFLO_OT_bake_normal(bpy.types.Operator):
 
 def bake_normal(obj, src):
     obj.data.calc_tangents()
+    src.data.calc_tangents()
 
     if not obj.data.vertex_colors:
         obj.data.vertex_colors.new()
@@ -43,9 +44,10 @@ def bake_normal(obj, src):
             obj_bitangent = obj_loop.bitangent
             obj_normal = obj_loop.normal
 
-            src_normal = src.data.loops[loop_index].normal
+            src_loop = src.data.loops[loop_index]
+            src_normal = src_loop.normal
 
-            obj.data.vertex_colors[0].data[loop_index].color = (
+            obj.data.vertex_colors["Col"].data[loop_index].color = (
                 mathutils.Vector.dot(src_normal, obj_tangent) * 0.5 + 0.5,
                 mathutils.Vector.dot(src_normal, obj_bitangent) * 0.5 + 0.5,
                 mathutils.Vector.dot(src_normal, obj_normal) * 0.5 + 0.5,

@@ -13,8 +13,7 @@ class BNFLO_OT_bake_normal(bpy.types.Operator):
             context.mode == "OBJECT" and
             len(context.selected_objects) == 2 and
             context.selected_objects[0].type == "MESH" and
-            context.selected_objects[1].type == "MESH" and
-            bpy.context.active_object == context.selected_objects[0]
+            context.selected_objects[1].type == "MESH"
         )
 
     def execute(self, context):

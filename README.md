@@ -35,6 +35,10 @@ Blender3.5とBlender4.1で動作する事を確認しています。
 
 <img src="https://github.com/nukora/BakeNormalForLiltoonOutline/assets/15606184/ab16e254-cb63-4e30-993c-e64d10e660fa" width="512px">
 
+## トラブルシュート
+### `Tangent space can only be computed for tris/quads, aborting` というエラーが出る。
+メッシュにNゴンが含まれている可能性があります。Nゴンがある場合はこのアドオンは使用できません。
+
 ## ライセンス
 このプログラムにはGPL-3.0ライセンスが適用されます。
 
